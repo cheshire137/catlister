@@ -111,6 +111,6 @@
     "build": "./node_modules/.bin/babel-node tools/run build",
     "start": "./node_modules/.bin/babel-node tools/run start",
     "setup-db": "./node_modules/.bin/babel-node tools/setupDatabase",
-    "postinstall": "if [ ! -f src/config.json ]; then cp src/config.json.example src/config.json; fi"
+    "postinstall": "if [ ! -f src/config.json ]; then if [ \"$NODE_ENV\" -ne \"production\" ]; then cp src/config.json.example src/config.json; fi; fi"
   }
 }
