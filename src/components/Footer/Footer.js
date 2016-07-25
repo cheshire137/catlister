@@ -6,7 +6,11 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <span>© 2016 Sarah Vessels</span>
+        <div className="content has-text-centered">
+          <span>© 2016 Sarah Vessels</span>
+          <span className={s.separator}>&middot;</span>
+          <a href="https://github.com/cheshire137/catlister" target="_blank">View source</a>
+        </div>
       </div>
     </footer>
   );
