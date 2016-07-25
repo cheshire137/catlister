@@ -42,6 +42,8 @@ In the catlister/ directory:
 
 Add Heroku Postgres as an addon on Heroku, this should set your `DATABASE_URL` environment variable on Heroku.
 
+    ./deploy.sh
+
 ## Thanks
 
 - [instagram-node](https://github.com/totemstech/instagram-node)
