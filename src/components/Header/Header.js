@@ -6,14 +6,20 @@ import Navigation from '../Navigation';
 
 function Header() {
   return (
-    <div className={s.root}>
-      <div className={s.container}>
-        <Navigation className={s.nav} />
-        <Link className={s.brand} to="/">
-          <span className={s.brandTxt}>Catlister</span>
-        </Link>
+    <header className="header">
+      <div className="container">
+        <nav className="nav">
+          <div className="nav-left">
+            <Link className="nav-item" to="/">
+              <span>Catlister</span>
+            </Link>
+          </div>
+          <div className="nav-right">
+            <Navigation />
+          </div>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 }
 

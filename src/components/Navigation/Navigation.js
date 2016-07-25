@@ -19,11 +19,11 @@ class Navigation extends Component {
 
   render() {
     return (
-      <div className={cx(s.root, this.props.className)} role="navigation">
+      <div role="navigation">
         {this.state.isAuthenticated ? (
-          <a className={s.link} href="/logout">Log Out</a>
+          <a className="nav-item" href="/logout">Log Out</a>
         ) : (
-          <a className={s.link} href="/instagram/sign-in">
+          <a className="nav-item" href="/instagram/sign-in">
             Log in with Instagram
           </a>
         )}
@@ -31,9 +31,5 @@ class Navigation extends Component {
     );
   }
 }
-
-Navigation.propTypes = {
-  className: PropTypes.string,
-};
 
 export default withStyles(Navigation, s);

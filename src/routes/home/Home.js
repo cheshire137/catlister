@@ -19,18 +19,21 @@ class Home extends Component {
   }
 
   render() {
+    const rows = [];
+    while (this.state.images.length > 0) {
+      rows.push(this.state.images.splice(0, 4));
+    }
     return (
-      <div className={s.root}>
-        <div className={s.container}>
-          <h1 className={s.title}>Catlister</h1>
-          <ul className={s.imagesList}>
-            {this.state.images.map(image =>
-              <li key={image.id}>
+      <div className="container">
+        {rows.map((images, index) =>
+          <div key={index} className="columns">
+            {images.map(image =>
+              <div className="column is-one-quarter" key={image.id}>
                 <Image {...image} />
-              </li>
+              </div>
             )}
-          </ul>
-        </div>
+          </div>
+        )}
       </div>
     );
   }

@@ -4,11 +4,11 @@ import s from './Footer.scss';
 
 function Footer() {
   return (
-    <div className={s.root}>
-      <div className={s.container}>
-        <span className={s.text}>© 2016 Sarah Vessels</span>
+    <footer className="footer">
+      <div className="container">
+        <span>© 2016 Sarah Vessels</span>
       </div>
-    </div>
+    </footer>
   );
 }
 
