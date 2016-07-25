@@ -4,7 +4,7 @@ This uses the [Instagram API](https://www.instagram.com/developer/) to display p
 
 ## How to Develop
 
-[Register an Instagram client ID](https://www.instagram.com/developer/clients/register/).
+[Register an Instagram client ID](https://www.instagram.com/developer/clients/register/). For the redirect URI, use `http://localhost:3000/instagram`.
 
     # Install dependencies:
     npm install
@@ -23,6 +23,24 @@ You need PostgreSQL installed.
     npm start
 
 Your browser should open to [localhost:3001](http://localhost:3001/).
+
+## How to Deploy to Heroku
+
+Create your Heroku app.
+
+Update your Instagram client and add a redirect URI for your Heroku app, e.g., `https://your-heroku-app-name.herokuapp.com/instagram`.
+
+In the catlister/ directory:
+
+    heroku git:remote -a YOUR_HEROKU_APP_NAME
+    git push heroku master
+    heroku config:set INSTAGRAM_CLIENT_ID="your Instagram client ID"
+    heroku config:set INSTAGRAM_CLIENT_SECRET="your Instagram client secret"
+    heroku config:set SESSION_SECRET="a random session key"
+    heroku config:set WEBSITE_HOSTNAME="your-heroku-app-name.herokuapp.com:443"
+    heroku config:set PORT=443
+
+Add Heroku Postgres as an addon on Heroku, this should set your `DATABASE_URL` environment variable on Heroku.
 
 ## Thanks
 
