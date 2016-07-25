@@ -105,13 +105,13 @@
     "csslint": "csscomb src/components --lint --verbose",
     "csscomb": "csscomb src/components --verbose",
     "test": "eslint src && jest",
-    "clean": "babel-node tools/run clean",
-    "copy": "babel-node tools/run copy",
-    "bundle": "babel-node tools/run bundle",
-    "build": "babel-node tools/run build",
-    "deploy": "babel-node tools/run deploy",
-    "start": "babel-node tools/run start",
-    "setup-db": "babel-node tools/setupDatabase",
+    "clean": "./node_modules/.bin/babel-node tools/run clean",
+    "copy": "./node_modules/.bin/babel-node tools/run copy",
+    "bundle": "./node_modules/.bin/babel-node tools/run bundle",
+    "build": "./node_modules/.bin/babel-node tools/run build",
+    "deploy": "./node_modules/.bin/babel-node tools/run deploy",
+    "start": "./node_modules/.bin/babel-node tools/run start",
+    "setup-db": "./node_modules/.bin/babel-node tools/setupDatabase",
     "postinstall": "if [ ! -f src/config.json ]; then cp src/config.json.example src/config.json; fi"
   }
 }
