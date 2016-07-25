@@ -1,0 +1,7 @@
+{
+  "instagram": {
+    "id": "your Instagram client ID here",
+    "secret": "your Instagram secret here"
+  },
+  "sessionSecret": "put a generated session secret key here"
+}
